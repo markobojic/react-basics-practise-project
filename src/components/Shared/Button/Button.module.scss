@@ -1,0 +1,19 @@
+@import "../../../styles/colors";
+
+.button {
+    color: $white;
+    background-color: $primary-color;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 5px rgba(143, 121, 121, 0.16);
+    border: none;
+    transition: 0.2s all ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $white;
+        color: $primary-color;
+    }
+}

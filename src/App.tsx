@@ -1,11 +1,21 @@
-import AddUser from "./components/UI/Users/AddUser";
-import Users from "./components/UI/Users/Users";
+import { useState } from "react";
+import AddUser from "./components/Users/AddUser/AddUser";
+import User from "./components/Users/models/user";
+import Users from "./components/Users/Users/Users";
 
 const App: React.FC = () => {
+    const [users, setUsers] = useState<User[]>([]);
+
+    const addUserHandler = (user: User) => {
+        setUsers((state) => {
+            return [...state, user];
+        });
+    };
+
     return (
         <div>
-            <AddUser />
-            <Users />
+            <AddUser addUser={addUserHandler} />
+            <Users users={users} />
         </div>
     );
 };

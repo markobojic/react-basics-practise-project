@@ -1,0 +1,18 @@
+@import "../../../styles/_colors.scss";
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-bottom: 0.25rem;
+        font-weight: bold;
+        color: $black;
+    }
+
+    input {
+        padding: 0.5rem;
+        border: 1px solid $smoke;
+        border-radius: 0.75rem;
+    }
+}
