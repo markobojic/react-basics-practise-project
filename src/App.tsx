@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import AddUser from "./components/Users/AddUser/AddUser";
 import User from "./components/Users/models/user";
 import Users from "./components/Users/Users/Users";
@@ -13,10 +13,10 @@ const App: React.FC = () => {
     };
 
     return (
-        <div>
+        <React.Fragment>
             <AddUser addUser={addUserHandler} />
             <Users users={users} />
-        </div>
+        </React.Fragment>
     );
 };
 

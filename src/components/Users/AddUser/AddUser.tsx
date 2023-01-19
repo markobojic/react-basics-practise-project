@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import Button from "../../Shared/Button/Button";
 import Card from "../../Shared/Card/Card";
@@ -55,7 +55,7 @@ const AddUser: React.FC<{ addUser(user: User): void }> = ({ addUser }) => {
     };
 
     return (
-        <div>
+        <React.Fragment>
             {error && (
                 <ErrorModal
                     title={error.title}
@@ -80,7 +80,7 @@ const AddUser: React.FC<{ addUser(user: User): void }> = ({ addUser }) => {
                     <Button type="submit">Add User</Button>
                 </form>
             </Card>
-        </div>
+        </React.Fragment>
     );
 };
 
